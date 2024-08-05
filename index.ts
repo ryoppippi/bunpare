@@ -1,4 +1,6 @@
+#!/usr/bin/env bun
 /* @see https://bun.sh/docs/install/lockfile */
+
 import process from 'node:process';
 import path from 'node:path';
 import { $ } from 'bun';
