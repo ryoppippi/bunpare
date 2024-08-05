@@ -2,6 +2,11 @@
 	"name": "bunpare",
 	"type": "module",
 	"version": "0.1.1",
+	"description": "A simple prepare script for bun.lockb",
+	"author": "ryoppippi",
+	"license": "MIT",
+	"repository": "ryoppippi/bunpare",
+	"sideEffects": false,
 	"bin": {
 		"bunpare": "index.ts"
 	},
