@@ -21,19 +21,13 @@ bunx bunpare
 
 ## Configure per project
 
-Install `bunpare`:
-
-```bash
-bun i -D bunpare
-```
-
-Then, add `bunpare` to prepare script in package.json:
+You can execute the script automatically when you run `bun install` by adding the following to your `package.json`:
 
 ```json
 {
 	// ...
 	"scripts": {
-		"prepare": "bunpare"
+		"prepare": "npx bunpare"
 	}
 	// ...
 }
