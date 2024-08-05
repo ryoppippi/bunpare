@@ -2,6 +2,9 @@
 	"name": "bupare",
 	"type": "module",
 	"module": "index.ts",
+	"bin": {
+		"bupare": "index.ts"
+	},
 	"scripts": {
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix"
