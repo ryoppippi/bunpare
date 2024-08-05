@@ -1,6 +1,6 @@
-# bupare
+# bunpare
 
-`bupare` is a tool to configure git for Bun's lockfile.
+`bunpare` is a tool to configure git for Bun's lockfile.
 
 ## Prerequisites
 

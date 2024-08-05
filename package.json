@@ -1,10 +1,10 @@
 {
-	"name": "bupare",
+	"name": "bunpare",
 	"type": "module",
 	"version": "0.0.0",
 	"module": "index.ts",
 	"bin": {
-		"bupare": "index.ts"
+		"bunpare": "index.ts"
 	},
 	"scripts": {
 		"lint": "eslint --cache .",
