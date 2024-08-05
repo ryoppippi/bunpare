@@ -19,9 +19,6 @@
 		"main": "bun run index.ts",
 		"release": "nr main && nr lint && nlx publint && nlx bumpp && npm publish"
 	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
 	"dependencies": {
 		"consola": "^3.2.3"
 	},
@@ -30,6 +27,7 @@
 		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
 		"@types/bun": "latest",
 		"eslint": "^9.8.0",
-		"eslint-plugin-format": "^0.1.2"
+		"eslint-plugin-format": "^0.1.2",
+		"typescript": "^5.0.0"
 	}
 }
