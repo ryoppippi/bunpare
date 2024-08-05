@@ -2,7 +2,6 @@
 	"name": "bunpare",
 	"type": "module",
 	"version": "0.1.1",
-	"module": "index.ts",
 	"bin": {
 		"bunpare": "index.ts"
 	},
