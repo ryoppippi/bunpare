@@ -3,7 +3,6 @@
 
 import process from 'node:process';
 import path from 'node:path';
-import { $ } from 'bun';
 import { consola } from 'consola';
 
 const GIT_ATTRIBUTES_CONFIG = `*.lockb binary diff=lockb`;
@@ -13,6 +12,9 @@ if (globalThis.Bun == null && process?.versions?.bun == null) {
 	consola.warn('Bun is not installed or not running in a bun shell');
 	process.exit(1);
 }
+
+// eslint-disable-next-line import/first
+import { $ } from 'bun';
 
 /* if git command not found, skip */
 try {
