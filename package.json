@@ -1,7 +1,7 @@
 {
 	"name": "bunpare",
 	"type": "module",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "A simple prepare script for bun.lockb",
 	"author": "ryoppippi",
 	"license": "MIT",
