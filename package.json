@@ -7,7 +7,9 @@
 	},
 	"scripts": {
 		"lint": "eslint --cache .",
-		"format": "nr lint --fix"
+		"format": "nr lint --fix",
+		"main": "bun run index.ts",
+		"release": "nr main && nr lint && nlx publint && nlx bumpp && npm publish"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
