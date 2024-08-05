@@ -1,6 +1,7 @@
 {
 	"name": "bupare",
 	"type": "module",
+	"version": "0.0.0",
 	"module": "index.ts",
 	"bin": {
 		"bupare": "index.ts"
