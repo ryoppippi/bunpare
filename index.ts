@@ -16,7 +16,7 @@ if (globalThis.Bun == null && process?.versions?.bun == null) {
 
 /* if git command not found, skip */
 try {
-	await $`which git`;
+	await $`which git`.quiet();
 }
 catch {
 	consola.warn('Git is not installed or not in PATH');
