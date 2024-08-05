@@ -1,5 +1,8 @@
 # bunpare
 
+[![npm version](https://img.shields.io/npm/v/bunpare?color=yellow)](https://npmjs.com/package/bunpare)
+[![npm downloads](https://img.shields.io/npm/dm/bunpare?color=yellow)](https://npmjs.com/package/bunpare)
+
 `bunpare` is a tool to configure git for Bun's lockfile.
 
 ## Prerequisites
