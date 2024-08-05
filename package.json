@@ -10,6 +10,9 @@
 	"bin": {
 		"bunpare": "index.ts"
 	},
+	"files": [
+		"index.ts"
+	],
 	"scripts": {
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
