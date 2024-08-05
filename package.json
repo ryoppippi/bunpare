@@ -1,0 +1,22 @@
+{
+	"name": "bupare",
+	"type": "module",
+	"module": "index.ts",
+	"scripts": {
+		"lint": "eslint --cache .",
+		"format": "nr lint --fix"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"devDependencies": {
+		"@antfu/ni": "^0.22.0",
+		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
+		"@types/bun": "latest",
+		"eslint": "^9.8.0",
+		"eslint-plugin-format": "^0.1.2"
+	},
+	"dependencies": {
+		"consola": "^3.2.3"
+	}
+}
