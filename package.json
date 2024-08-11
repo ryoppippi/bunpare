@@ -20,7 +20,7 @@
 		"release": "nr main && nr lint && nlx publint && nlx bumpp && npm publish"
 	},
 	"dependencies": {
-		"log-symbols": "^6.0.0"
+		"consola": "^3.2.3"
 	},
 	"devDependencies": {
 		"@antfu/ni": "^0.22.0",
