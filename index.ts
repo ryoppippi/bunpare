@@ -7,14 +7,11 @@ import { consola } from 'consola';
 
 const GIT_ATTRIBUTES_CONFIG = `*.lockb binary diff=lockb`;
 
-/* check if running on bun runtime */
-if (globalThis.Bun == null && process?.versions?.bun == null) {
-	consola.warn('Bun is not installed or not running in a bun shell');
-	process.exit(1);
-}
-
-// eslint-disable-next-line import/first
-import { $ } from 'bun';
+const { $ } = await import('bun')
+	.catch(() => {
+		consola.error('Bun is not installed');
+		process.exit(1);
+	});
 
 /* if git command not found, skip */
 try {
