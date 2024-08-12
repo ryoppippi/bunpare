@@ -13,29 +13,14 @@ const { $ } = await import('bun')
 		process.exit(1);
 	});
 
-/* if git command not found, skip */
-try {
-	await $`which git`.quiet();
-}
-catch {
-	consola.warn('Git is not installed or not in PATH');
-	process.exit(1);
-}
+/* if git command not found, causes an error */
+await $`which git`.quiet();
 
-/* if not git repository, skip */
-const isInsideGitWorkTree: unknown = await $`git rev-parse --is-inside-work-tree`.json();
+/* if not git repository, causes an error */
+await $`git rev-parse --is-inside-work-tree`.quiet();
 
-if (typeof isInsideGitWorkTree !== 'boolean' || !isInsideGitWorkTree) {
-	consola.warn('Not a git repository');
-	process.exit(1);
-}
-
+/* if not git repository, causes an error */
 const gitRoot = await $`git rev-parse --show-toplevel`.text().then(t => t.trim());
-
-if (gitRoot == null) {
-	consola.warn('Failed to get git root');
-	process.exit(1);
-}
 
 /* Add the following to your local or global .gitattributes file */
 const gitAttributesPath = path.join(gitRoot, './.gitattributes');
