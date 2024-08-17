@@ -1,15 +1,25 @@
 #!/usr/bin/env bun
+/* eslint-disable no-console */
 /* @see https://bun.sh/docs/install/lockfile */
 
 import process from 'node:process';
 import path from 'node:path';
-import { consola } from 'consola';
+import logSymbols from 'log-symbols';
 
 const GIT_ATTRIBUTES_CONFIG = `*.lockb binary diff=lockb`;
 
+function success(message: string) {
+	console.log(logSymbols.success, message);
+}
+
+function error(message: string) {
+	console.log(logSymbols.error, message);
+	process.exit(1);
+}
+
 const { $ } = await import('bun')
 	.catch(() => {
-		consola.error('Bun is not installed');
+		error('Bun is not installed');
 		process.exit(1);
 	});
 
@@ -29,7 +39,7 @@ const gitAttributesFile = Bun.file(gitAttributesPath);
 /* if .gitattributes does not exist, create it */
 if (!await gitAttributesFile.exists()) {
 	await $`touch ${gitAttributesPath}`;
-	consola.success('Created .gitattributes file');
+	success('Created .gitattributes file');
 }
 
 /* Read .gitattributes file */
@@ -37,11 +47,11 @@ const gitAttributes = await gitAttributesFile.text();
 
 if (!gitAttributes.includes(GIT_ATTRIBUTES_CONFIG)) {
 	await $`echo ${GIT_ATTRIBUTES_CONFIG} >> ${gitAttributesPath}`;
-	consola.success('Added diff.lockb configuration to .gitattributes');
+	success('Added diff.lockb configuration to .gitattributes');
 }
 
 /* Run git config to local repo */
 await $`git config diff.lockb.textconv bun`;
 await $`git config diff.lockb.binary true`;
 
-consola.success(`Successfully configured git diff.lockb at ${gitRoot}`);
+success(`Successfully configured git diff.lockb at ${gitRoot}`);
