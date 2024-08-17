@@ -8,11 +8,11 @@ import logSymbols from 'log-symbols';
 
 const GIT_ATTRIBUTES_CONFIG = `*.lockb binary diff=lockb`;
 
-function success(message: string) {
+function success(message: string): void {
 	console.log(logSymbols.success, message);
 }
 
-function error(message: string) {
+function error(message: string): void {
 	console.log(logSymbols.error, message);
 	process.exit(1);
 }
