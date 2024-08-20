@@ -12,16 +12,12 @@ function success(message: string): void {
 	console.log(styleText('green', `√`), message);
 }
 
-function error(message: string): void {
+function error(message: string): never {
 	console.log(styleText('red', `×`), message);
 	process.exit(1);
 }
 
-const { $ } = await import('bun')
-	.catch(() => {
-		error('Bun is not installed');
-		process.exit(1);
-	});
+const { $ } = await import('bun').catch(() => error('Bun is not installed'));
 
 /* if git command not found, causes an error */
 await $`which git`.quiet();
