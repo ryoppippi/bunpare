@@ -19,9 +19,6 @@
 		"main": "bun run index.ts",
 		"release": "nr main && nr lint && nlx publint && nlx bumpp && npm publish"
 	},
-	"dependencies": {
-		"log-symbols": "^7.0.0"
-	},
 	"devDependencies": {
 		"@antfu/ni": "^0.22.4",
 		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",

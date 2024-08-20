@@ -4,16 +4,16 @@
 
 import process from 'node:process';
 import path from 'node:path';
-import logSymbols from 'log-symbols';
+import { styleText } from 'node:util';
 
 const GIT_ATTRIBUTES_CONFIG = `*.lockb binary diff=lockb`;
 
 function success(message: string): void {
-	console.log(logSymbols.success, message);
+	console.log(styleText('green', `√`), message);
 }
 
 function error(message: string): void {
-	console.log(logSymbols.error, message);
+	console.log(styleText('red', `×`), message);
 	process.exit(1);
 }
 
