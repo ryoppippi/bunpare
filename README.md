@@ -29,7 +29,7 @@ You can execute the script automatically when you run `bun install` by adding th
 {
 	// ...
 	"scripts": {
-		"prepare": "npx bunpare"
+		"prepare": "bunx bunpare"
 	}
 	// ...
 }
