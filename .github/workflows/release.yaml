@@ -1,26 +1,56 @@
 name: release
 
 env:
-  DENO_VERSION: 1.x
+  NODE_VERSION: lts/*
+  BUN_VERSION: latest
 
 on:
   push:
     tags:
-      - '*'
+      - 'v*'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  release:
+  npm:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: Release
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: denoland/setup-deno@v1
+      - uses: actions/setup-node@v4
         with:
-          deno-version: ${{ env.DENO_VERSION }}
-      - run: deno run -A npm:changelogithub
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: 'https://registry.npmjs.org'
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      - run: bun i --frozen-lockfile
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  release:
+    needs:
+      - npm
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - run: bunx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
