@@ -17,7 +17,7 @@
 		"lint": "eslint --cache .",
 		"format": "nr lint --fix",
 		"main": "bun run index.ts",
-		"release": "nr main && nr lint && nlx publint && nlx bumpp && npm publish"
+		"release": "nr main && nr lint && nlx publint && nlx bumpp"
 	},
 	"devDependencies": {
 		"@antfu/ni": "^0.22.4",
