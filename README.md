@@ -5,8 +5,6 @@
 
 `bunpare` is a tool to configure git for Bun's lockfile.
 
-**This library has zero dependencies!**
-
 ## Prerequisites
 
 - [Bun](https://bun.sh/) must be installed and available in your PATH.

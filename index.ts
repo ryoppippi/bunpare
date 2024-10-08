@@ -2,9 +2,12 @@
 /* eslint-disable no-console */
 /* @see https://bun.sh/docs/install/lockfile */
 
+import 'bun-only';
+
 import process from 'node:process';
 import path from 'node:path';
 import { styleText } from 'node:util';
+import { $ } from 'bun';
 
 const GIT_ATTRIBUTES_CONFIG = `*.lockb binary diff=lockb`;
 
@@ -16,8 +19,6 @@ function error(message: string): never {
 	console.log(styleText('red', `×`), message);
 	process.exit(1);
 }
-
-const { $ } = await import('bun').catch(() => error('Bun is not installed'));
 
 /* if git command not found, causes an error */
 await $`which git`.quiet();
