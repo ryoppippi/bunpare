@@ -20,7 +20,7 @@
 		"release": "nr main && nr lint && nlx publint && nlx bumpp"
 	},
 	"devDependencies": {
-		"@antfu/ni": "^0.23.0",
+		"@antfu/ni": "^23.3.1",
 		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
 		"@types/bun": "latest",
 		"eslint": "^9.12.0",
