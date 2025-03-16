@@ -15,11 +15,6 @@ function success(message: string): void {
 	console.log(styleText('green', `√`), message);
 }
 
-function error(message: string): never {
-	console.log(styleText('red', `×`), message);
-	process.exit(1);
-}
-
 /* if git command not found, causes an error */
 await $`which git`.quiet();
 
