@@ -7,7 +7,7 @@
         "bun-only": "^0.0.1",
       },
       "devDependencies": {
-        "@antfu/ni": "^0.23.0",
+        "@antfu/ni": "^0.23.2",
         "@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
         "@types/bun": "latest",
         "clean-pkg-json": "^1.2.1",
@@ -22,7 +22,7 @@
 
     "@antfu/install-pkg": ["@antfu/install-pkg@0.3.3", "", { "dependencies": { "@jsdevtools/ez-spawn": "^3.0.4" } }, "sha512-nHHsk3NXQ6xkCfiRRC8Nfrg8pU5kkr3P3Y9s9dKqiuRmBD0Yap7fymNDjGFKeWhZQHqqbCS5CfeMy9wtExM24w=="],
 
-    "@antfu/ni": ["@antfu/ni@0.23.0", "", { "bin": { "ni": "bin/ni.mjs", "nci": "bin/nci.mjs", "nr": "bin/nr.mjs", "nu": "bin/nu.mjs", "nlx": "bin/nlx.mjs", "na": "bin/na.mjs", "nun": "bin/nun.mjs" } }, "sha512-R5/GkA3PfGewAXLzz6lN5XagunF6PKeDtWt8dbZQXvHfebLS0qEczV+Azg/d+tKgSh6kRBpxvu8oSjARdPtw0A=="],
+    "@antfu/ni": ["@antfu/ni@0.23.2", "", { "bin": { "na": "bin/na.mjs", "ni": "bin/ni.mjs", "nr": "bin/nr.mjs", "nu": "bin/nu.mjs", "nci": "bin/nci.mjs", "nlx": "bin/nlx.mjs", "nun": "bin/nun.mjs" } }, "sha512-FSEVWXvwroExDXUu8qV6Wqp2X3D1nJ0Li4LFymCyvCVrm7I3lNfG0zZWSWvGU1RE7891eTnFTyh31L3igOwNKQ=="],
 
     "@antfu/utils": ["@antfu/utils@0.7.10", "", {}, "sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww=="],
 
