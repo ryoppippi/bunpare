@@ -10,6 +10,7 @@
         "@antfu/ni": "^0.23.0",
         "@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
         "@types/bun": "latest",
+        "clean-pkg-json": "^1.2.1",
         "eslint": "^9.12.0",
         "eslint-plugin-format": "^0.1.2",
         "typescript": "^5.6.2",
@@ -188,6 +189,8 @@
     "character-reference-invalid": ["character-reference-invalid@1.1.4", "", {}, "sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg=="],
 
     "ci-info": ["ci-info@4.0.0", "", {}, "sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg=="],
+
+    "clean-pkg-json": ["clean-pkg-json@1.2.1", "", { "bin": { "clean-pkg-json": "dist/index.js" } }, "sha512-zvQBW4bCn/49SrPI3jj446QugNC3iub/9ZeFKBsCtFxxMRAlyuXTw1I5EqoOLfG1i5261Z4hKLayquHIo+/2HA=="],
 
     "clean-regexp": ["clean-regexp@1.0.0", "", { "dependencies": { "escape-string-regexp": "^1.0.5" } }, "sha512-GfisEZEJvzKrmGWkvfhgzcz/BllN1USeqD2V6tg14OAOgaCD2Z/PUEuxnAZ/nPvmaHRG7a8y77p1T/IRQ4D1Hw=="],
 
