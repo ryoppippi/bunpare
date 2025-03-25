@@ -20,16 +20,16 @@
 		"prepack": "clean-pkg-json",
 		"release": "nr main && nr lint && nlx publint && nlx bumpp"
 	},
+	"dependencies": {
+		"bun-only": "^0.0.1"
+	},
 	"devDependencies": {
-		"@antfu/ni": "^0.23.0",
+		"@antfu/ni": "^24.3.0",
 		"@ryoppippi/eslint-config": "npm:@jsr/ryoppippi__eslint-config",
 		"@types/bun": "latest",
 		"clean-pkg-json": "^1.2.1",
 		"eslint": "^9.12.0",
 		"eslint-plugin-format": "^0.1.2",
 		"typescript": "^5.6.2"
-	},
-	"dependencies": {
-		"bun-only": "^0.0.1"
 	}
 }
