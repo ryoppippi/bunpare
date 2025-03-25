@@ -4,7 +4,6 @@
 
 import 'bun-only';
 
-import process from 'node:process';
 import path from 'node:path';
 import { styleText } from 'node:util';
 import { $ } from 'bun';
